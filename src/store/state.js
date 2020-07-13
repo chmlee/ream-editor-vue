@@ -1,5 +1,11 @@
 import exampleRawText from '@/data/LowCountry'
 
 export default {
-  updatedRawText: exampleRawText.text
+  input: {
+    raw: exampleRawText.text
+  },
+  setting: {
+    outputMode: 'raw'
+  },
+  updateSignal: 1
 }
