@@ -1,5 +1,5 @@
 <template>
   <div>
-    csv 
+    csv
   </div>
 </template>
