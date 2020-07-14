@@ -12,6 +12,6 @@ git init
 git add -A
 git commit -m 'deploy'
 
-push -f git@github.com:chmlee/markdata-editor.git master:gh-pages
+get push -f git@github.com:chmlee/markdata-editor.git master:gh-pages
 
 cd -
