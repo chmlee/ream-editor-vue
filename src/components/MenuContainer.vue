@@ -35,7 +35,8 @@ export default {
         { text: 'raw', value: 'raw' },
         { text: 'html', value: 'html' },
         { text: 'tree', value: 'tree' },
-        { text: 'csv', value: 'csv' }
+        { text: 'csv', value: 'csv' },
+        { text: 'pdf', value: 'pdf' }
       ]
     }
   },

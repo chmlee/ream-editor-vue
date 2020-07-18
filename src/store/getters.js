@@ -1,5 +1,6 @@
 // import { parseMarkdata } from '@/libs/markdata_.js/parser.js'
 import { MdFile } from '@/libs/markdata.js/src/markdata.js'
+import { jsPDF as JsPDF } from 'jspdf'
 
 export default {
   getDefaultInputRaw: (state) => {
@@ -17,5 +18,11 @@ export default {
   getMdFile: (state) => {
     const mdFile = new MdFile(state.input.raw)
     return mdFile
+  },
+  getPDF: (state) => {
+    const doc = new JsPDF()
+    doc.text('Hello Word!', 10, 10)
+    doc.save('a4.pdf')
+    return doc
   }
 }

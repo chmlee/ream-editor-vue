@@ -19,12 +19,14 @@ import { mapState, mapGetters } from 'vuex'
 import csvOutput from './OutputMode/csvOutput.vue'
 import htmlOutput from './OutputMode/htmlOutput.vue'
 import treeOutput from './OutputMode/treeOutput.vue'
+import pdfOutput from './OutputMode/pdfOutput.vue'
 
 export default {
   components: {
     csvOutput,
     htmlOutput,
-    treeOutput
+    treeOutput,
+    pdfOutput
   },
   data () {
     return {}
