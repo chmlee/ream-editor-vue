@@ -8,6 +8,7 @@
       :is="getOutputComponent"
       :inputTree="getInputTree"
       :inputRaw="input.raw"
+      :mdFile="getMdFile"
       class="output-content-container"
     ></component>
   </div>
@@ -34,7 +35,8 @@ export default {
       'setting'
     ]),
     ...mapGetters([
-      'getInputTree'
+      'getInputTree',
+      'getMdFile'
     ]),
     getOutputComponent () {
       return this.setting.outputMode + 'Output'

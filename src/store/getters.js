@@ -1,4 +1,5 @@
-import { parseMarkdata } from '@/libs/markdata.js/parser.js'
+// import { parseMarkdata } from '@/libs/markdata_.js/parser.js'
+import { MdFile } from '@/libs/markdata.js/src/markdata.js'
 
 export default {
   getDefaultInputRaw: (state) => {
@@ -11,6 +12,10 @@ export default {
     return state.setting
   },
   getInputTree: (state) => {
-    return parseMarkdata(state.input.raw)
+    return 1 // parseMarkdata(state.input.raw)
+  },
+  getMdFile: (state) => {
+    const mdFile = new MdFile(state.input.raw)
+    return mdFile
   }
 }

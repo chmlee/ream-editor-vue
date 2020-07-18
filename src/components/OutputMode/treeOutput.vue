@@ -1,7 +1,7 @@
 <template>
   <div>
     <pre>
-{{ inputTree }}
+{{ mdFile.toTree() }}
     </pre>
   </div>
 </template>
@@ -9,7 +9,7 @@
 <script>
 export default {
   props: [
-    'inputTree'
+    'mdFile'
   ]
 }
 </script>
