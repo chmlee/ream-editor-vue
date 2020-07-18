@@ -1,20 +1,17 @@
 <template>
   <div class="home-container">
 
-    <div class="header-container">
+    <div class="menu-container">
       <h1>Datamark Editor</h1>
-    </div>
-
-    <div class="-menu-container">
-      <MenuContainer />
+      <Menu />
     </div>
 
     <div class="content-container">
       <div class="left-container content-col">
-        <InputContainer />
+        <Input />
       </div>
       <div class="right-container content-col">
-        <OutputContainer />
+        <Output />
       </div>
     </div>
 
@@ -22,16 +19,16 @@
 </template>
 
 <script>
-import MenuContainer from '@/components/MenuContainer.vue'
-import InputContainer from '@/components/InputContainer.vue'
-import OutputContainer from '@/components/OutputContainer.vue'
+import Menu from '@/components/Menu.vue'
+import Input from '@/components/Input.vue'
+import Output from '@/components/Output.vue'
 
 export default {
   name: 'Home',
   components: {
-    MenuContainer,
-    InputContainer,
-    OutputContainer
+    Menu,
+    Input,
+    Output
   },
   methods: {
     onEnter: function () {
@@ -71,7 +68,7 @@ h1 {
   font-size: 4vh;
 }
 
-.main-menu-container {
+.menu-container {
   height: 5vh;
   background-color: grey;
   display: flex;
@@ -81,7 +78,7 @@ h1 {
 }
 
 .content-container {
-  height: 90vh;
+  height: 95vh;
   display: flex;
   text-align: left;
   font-size: 25px;

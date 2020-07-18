@@ -74,8 +74,8 @@ export default {
 
 .CodeMirror {
     border: 1px solid #eee;
-    height: 90vh;
-    max-height: 90vh;
+    height: 100vh;
+    max-height: 100vh;
 }
 
 .CodeMirror-scroll {

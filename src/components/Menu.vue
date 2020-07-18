@@ -29,14 +29,14 @@ export default {
   data () {
     return {
       setting: {
-        outputMode: 'raw'
+        outputMode: 'Raw'
       },
       outputModes: [
-        { text: 'raw', value: 'raw' },
-        { text: 'html', value: 'html' },
-        { text: 'tree', value: 'tree' },
-        { text: 'csv', value: 'csv' },
-        { text: 'pdf', value: 'pdf' }
+        { text: 'Raw', value: 'Raw' },
+        { text: 'HTML', value: 'HTML' },
+        { text: 'Tree', value: 'Tree' },
+        { text: 'CSV', value: 'CSV' },
+        { text: 'PDF', value: 'PDF' }
       ]
     }
   },

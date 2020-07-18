@@ -5,7 +5,7 @@ export default {
     raw: exampleRawText.text
   },
   setting: {
-    outputMode: 'raw'
+    outputMode: 'Raw'
   },
   updateSignal: 1
 }

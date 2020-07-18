@@ -1,7 +1,7 @@
 <template>
   <div class="output-wrapper">
     <pre
-      v-if="getOutputComponent === 'rawOutput'" class="output-raw-pre"
+      v-if="getOutputComponent === 'OutputRaw'" class="output-raw-pre"
     >{{ input.raw }}</pre>
     <component
       v-else
@@ -16,17 +16,17 @@
 
 <script>
 import { mapState, mapGetters } from 'vuex'
-import csvOutput from './OutputMode/csvOutput.vue'
-import htmlOutput from './OutputMode/htmlOutput.vue'
-import treeOutput from './OutputMode/treeOutput.vue'
-import pdfOutput from './OutputMode/pdfOutput.vue'
+import OutputCSV from './OutputCSV.vue'
+import OutputHTML from './OutputHTML.vue'
+import OutputTree from './OutputTree.vue'
+import OutputPDF from './OutputPDF.vue'
 
 export default {
   components: {
-    csvOutput,
-    htmlOutput,
-    treeOutput,
-    pdfOutput
+    OutputCSV,
+    OutputHTML,
+    OutputTree,
+    OutputPDF
   },
   data () {
     return {}
@@ -41,7 +41,7 @@ export default {
       'getMdFile'
     ]),
     getOutputComponent () {
-      return this.setting.outputMode + 'Output'
+      return 'Output' + this.setting.outputMode
     }
   }
 }
