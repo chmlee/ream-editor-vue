@@ -1,25 +1,47 @@
 <template>
-  <div class="main-menu-wrapper">
+  <nav class="navbar">
+    <ul class="navbar-nav">
 
-    <div class="main-menu-col">
-      <button
-        type="button"
-        @click="toggleUpdateSignal"
-      >Update Input
-      </button>
-    </div>
+      <li class="nav-item">
+        <button
+          type="button"
+          class="update"
+          title="Shortcut: Ctrl+Enter"
+          @click="toggleUpdateSignal"
+        >Update
+        </button>
+      </li>
 
-    <div class="main-menu-col">
-      <label>Output Mode:</label>
-      <select v-model="setting.outputMode" @change="toggleUpdateSignal">
+      <li class="nav-item-gap">
+      </li>
+
+      <li>
+        Demo:
+        <select v-model="demo" @click="updateDemo">
+          <option v-for="demo in demos" v-bind:key="demo.text">
+            {{ demo.text }}
+          </option>
+        </select>
+      </li>
+
+      <li class="nav-item-gap">
+      </li>
+
+      <li class="nav-item">
+        Output:
+        <select v-model="setting.outputMode" @change="toggleUpdateSignal">
           <option v-for="outputMode in outputModes" v-bind:key="outputMode.value">
             {{ outputMode.text }}
           </option>
-      </select>
-    </div>
+        </select>
+      </li>
 
-  </div>
+      <li class="nav-item title">
+          Markdata Editor
+      </li>
 
+    </ul>
+  </nav>
 </template>
 
 <script>
@@ -37,14 +59,25 @@ export default {
         { text: 'Tree', value: 'Tree' },
         { text: 'CSV', value: 'CSV' },
         { text: 'PDF', value: 'PDF' }
+      ],
+      demo: 'Simple.md',
+      demos: [
+        { text: 'Simple.md' },
+        { text: 'EuropeUnion.md' },
+        { text: 'Country.md' },
+        { text: 'Clear Demo' }
       ]
     }
   },
   methods: {
     ...mapActions([
       'toggleUpdateSignal',
-      'updateSetting'
-    ])
+      'updateSetting',
+      'importDemo'
+    ]),
+    updateDemo () {
+      this.importDemo(this.demo)
+    }
   },
   computed: {
     ...mapState([
@@ -59,15 +92,48 @@ export default {
 }
 </script>
 
-<style>
-.main-menu-wrapper {
-   display: flex;
-   width: 100%;
+<style scoped>
+
+.navbar {
+  width: 100%;
+  height: 100%;
+  font-size: 2vh;
+  background: silver;
 }
 
-.main-menu-col {
-  margin: 10px;
-  text-align: center;
-  font-size: 25px;
+.navbar-nav {
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
+
+.nav-item {
+  height: 100%;
+  padding: 0;
+  margin: 0 0px;
+  height: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.nav-item:last-child {
+  right: 3vh;
+  position: absolute;
+}
+
+.title {
+  font-size: 4vh;
+}
+
+.nav-item-gap {
+  width: 10px;
+}
+
 </style>

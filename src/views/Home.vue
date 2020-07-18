@@ -2,7 +2,6 @@
   <div class="home-container">
 
     <div class="menu-container">
-      <h1>Datamark Editor</h1>
       <Menu />
     </div>
 
@@ -64,17 +63,12 @@ body{
   padding-left: 2vh;
 }
 
-h1 {
-  font-size: 4vh;
-}
-
 .menu-container {
   height: 5vh;
   background-color: grey;
   display: flex;
   justify-content: center;
   background-color: white;
-  font-size: 25px;
 }
 
 .content-container {

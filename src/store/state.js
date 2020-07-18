@@ -1,8 +1,9 @@
-import exampleRawText from '@/data/LowCountry'
+import demo from '@/assets/demo/demo.js'
 
 export default {
+  demo: 'Simple.md',
   input: {
-    raw: exampleRawText.text
+    raw: demo.Simple
   },
   setting: {
     outputMode: 'Raw'

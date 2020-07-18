@@ -20,9 +20,6 @@ export default {
   },
   data () {
     return {
-      input: {
-        raw: null
-      },
       cmOptions: {
         // keyMap: 'vim'
         tabSize: 2,
@@ -32,15 +29,13 @@ export default {
       }
     }
   },
-  mounted () {
-    this.input.raw = this.getDefaultInputRaw
-  },
   computed: {
     ...mapGetters([
       'getDefaultInputRaw'
     ]),
     ...mapState([
-      'updateSignal'
+      'updateSignal',
+      'input'
     ])
   },
   methods: {

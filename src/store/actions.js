@@ -8,5 +8,8 @@ export default {
   },
   updateInput: ({ commit, state }, input) => {
     commit('MUTATE_INPUT', input)
+  },
+  importDemo: ({ commit, state }, fileName) => {
+    commit('MUTATE_DEMO', fileName)
   }
 }
