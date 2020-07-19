@@ -1,6 +1,6 @@
 import { MdFile } from '@/libs/markdata.js/src/markdata.js'
 import { jsPDF as JsPDF } from 'jspdf'
-import { demo } from '@/assets/demo/demo.js'
+// import { demo } from '@/assets/demo/demo.js'
 
 export default {
   getDefaultInputRaw: (state) => {
@@ -24,9 +24,9 @@ export default {
     doc.text('Hello Word!', 10, 10)
     doc.save('a4.pdf')
     return doc
-  },
-  getDemo: (fileNameWithExtension) => {
-    const fileName = fileNameWithExtension.split('.')[0]
-    return demo[fileName]
   }
+  // getDemo: (fileNameWithExtension) => {
+  //   const fileName = fileNameWithExtension.split('.')[0]
+  //   return demo[fileName]
+  // }
 }
