@@ -1,3 +1,6 @@
 [submodule "src/libs/markdata.js"]
 	path = src/libs/markdata.js
 	url = https://github.com/chmlee/markdata.js
+[submodule "src/assets/markdata-demo"]
+	path = src/assets/markdata-demo
+	url = https://github.com/chmlee/markdata-demo
