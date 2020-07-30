@@ -1,4 +1,4 @@
-import demo from '@/assets/demo/demo.js'
+import demo from '@/assets/markdata-demo/demo.js'
 
 export default {
   TOGGLE_UPDATE_SIGNAL: (state) => {
