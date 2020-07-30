@@ -51,7 +51,7 @@ export default {
   data () {
     return {
       setting: {
-        outputMode: 'Raw'
+        outputMode: 'CSV'
       },
       outputModes: [
         { text: 'Raw', value: 'Raw' },
@@ -60,11 +60,10 @@ export default {
         { text: 'CSV', value: 'CSV' },
         { text: 'PDF', value: 'PDF' }
       ],
-      demo: 'Simple.md',
+      demo: 'Example.md',
       demos: [
-        { text: 'Simple.md' },
+        { text: 'Example.md' },
         { text: 'EuropeUnion.md' },
-        { text: 'Country.md' },
         { text: 'Clear Demo' }
       ]
     }

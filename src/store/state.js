@@ -1,12 +1,12 @@
 import demo from '@/assets/markdata-demo/demo.js'
 
 export default {
-  demo: 'Simple.md',
+  demo: 'Example.md',
   input: {
-    raw: demo.Simple
+    raw: demo.Example
   },
   setting: {
-    outputMode: 'Raw'
+    outputMode: 'CSV'
   },
   updateSignal: 1
 }
