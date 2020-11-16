@@ -37,7 +37,7 @@
       </li>
 
       <li class="nav-item title">
-          Markdata Editor
+          REAM Editor
       </li>
 
     </ul>

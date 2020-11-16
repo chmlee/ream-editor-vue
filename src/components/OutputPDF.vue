@@ -2,7 +2,7 @@
   <div>
     <div>
       <button type="button" @click="downloadPDF">Download PDF</button>
-     (not working as intended)
+     (not working)
     </div>
     <div>
       {{ input.raw }}
