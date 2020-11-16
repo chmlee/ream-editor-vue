@@ -4,7 +4,7 @@
 #set -e
 
 # build
-npm run build
+yarn build
 
 cd dist
 
